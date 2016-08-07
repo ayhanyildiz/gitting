@@ -31,41 +31,41 @@
                                                                  ║                                                                                           
                ◀─git checkout <file>─▲                           ║                                                                                           
                │ git checkout .      │                           ║  ┌──────────────────────────────┐ ╭─────────────────────────────────────╮                 
-               │                     │                           ║  │git remote                    ◀─┤view remote repositories             │                 
- ┌ ─ ─ ─ ─ ┐  ┌▼─────────┐  ┌────────┴┐  ┌ ─ ─ ─ ┐  ┌ ─ ─ ─ ─ ┐  ║  │                              │ ╰─────────────────────────────────────╯                 
-  Untracked   │Unmodified│  │ Modified│    Staged    Committed   ║  │git remote -v                 ◀────────────────────────────────────────────────────────╮
- └ ─ ─ ─ ─ ┘  └──────────┘  └─────────┘  └ ─ ─ ─ ┘  └ ─ ─ ─ ─ ┘  ║  │                              │ │origin  git@github.com:ayhanyildiz/gitting.git (fetch)│
-═════════════════════════════════════════════════════════════════╣  │got remote show <repo-name>   │ │origin  git@github.com:ayhanyildiz/gitting.git (push) │
-                                                                 ║  │                              │ │                                                      │
-    ◀──git rm --cached  . -r───────────────▲                     ║  └──────┬───────────────────────┘ │ayhan   git@github.com:ayhanyildiz/gitting.git (fetch)│
-    │  git rm --cached  <file>             │                     ║         │                         │ayhan   git@github.com:ayhanyildiz/gitting.git (push) │
-    │                          ◀──────git reset─▲                ║         │                         ╰──────────────────────────────────────────────────────╯
-    │                          │ git reset HEAD │                ║         │                                                                                 
-    │                          │           │    │                ║  ╔══════▼══════════════════════════════════════════════════════╗                          
- ┌──▼──────┐  ┌ ─ ─ ─ ─ ─   ┌──▼──────┐  ┌─┴───○┴┐  ┌ ─ ─ ─ ─ ┐  ║  ║* remote ayhan                                               ║                          
- │Untracked│   Unmodified│  │ Modified│  │ Staged│   Committed   ║  ║  Fetch URL: git@github.com:ayhanyildiz/gitting.git          ║                          
- └─────────┘  └ ─ ─ ─ ─ ─   └─────────┘  └───────┘  └ ─ ─ ─ ─ ┘  ║  ║  Push  URL: git@github.com:ayhanyildiz/gitting.git          ║                          
+               │                     │                           ║  │git remote                    ◀─┤view remote repositories name        │                 
+ ┌ ─ ─ ─ ─ ┐  ┌▼─────────┐  ┌────────┴┐  ┌ ─ ─ ─ ┐  ┌ ─ ─ ─ ─ ┐  ║  │                              │ ╰─────┬────────────────────────────────────────────┐    
+  Untracked   │Unmodified│  │ Modified│    Staged    Committed   ║  │git remote -v                 ◀───────┤   view remote repositories name and url    ├───╮
+ └ ─ ─ ─ ─ ┘  └──────────┘  └─────────┘  └ ─ ─ ─ ┘  └ ─ ─ ─ ─ ┘  ║  │                              │ │     └────────────────────────────────────────────┘   │
+═════════════════════════════════════════════════════════════════╣  │                              │ │origin  git@github.com:ayhanyildiz/gitting.git (fetch)│
+                                                                 ║  │got remote show <repo-name>   │ │origin  git@github.com:ayhanyildiz/gitting.git (push) │
+    ◀──git rm --cached  . -r───────────────▲                     ║  └──────┬───────────────────────┘ │                                                      │
+    │  git rm --cached  <file>             │                     ║         │                         │ayhan   git@github.com:ayhanyildiz/gitting.git (fetch)│
+    │                          ◀──────git reset─▲                ║         │                         │ayhan   git@github.com:ayhanyildiz/gitting.git (push) │
+    │                          │ git reset HEAD │                ║         │                         ╰──────────────────────────────────────────────────────╯
+    │                          │           │    │                ║   ┌─────▼─────────────────────────────────────────────────────┐                           
+ ┌──▼──────┐  ┌ ─ ─ ─ ─ ─   ┌──▼──────┐  ┌─┴───○┴┐  ┌ ─ ─ ─ ─ ┐  ║   │ view remote repository with tracking branch information.  │                           
+ │Untracked│   Unmodified│  │ Modified│  │ Staged│   Committed   ║  ╔╩───────────────────────────────────────────────────────────╩╗                          
+ └─────────┘  └ ─ ─ ─ ─ ─   └─────────┘  └───────┘  └ ─ ─ ─ ─ ┘  ║  ║* remote ayhan                                               ║                          
+                                                                 ║  ║  Fetch URL: git@github.com:ayhanyildiz/gitting.git          ║                          
+═════════════════════════════════════════════════════════════════╣  ║  Push  URL: git@github.com:ayhanyildiz/gitting.git          ║                          
                                                                  ║  ║  HEAD branch: master                                        ║                          
-═════════════════════════════════════════════════════════════════╣  ║  Remote branch:                                             ║                          
-                                                                 ║  ║    master new (next fetch will store in remotes/ayhan)      ║                          
-                                            ▲─git commit -m─▶    ║  ║  Local ref configured for 'git push':                       ║                          
-                                            │               │    ║  ║    master pushes to master (local out of date)              ║                          
-      ▲───────────────────git commit -am────┼────────────▶  │    ║  ╚═════════════════════════════════════════════════════════════╝                          
-      │                   git commit -a -m  │            │  │    ║                                                                                           
-      │                          │          │            │  │    ║                                                                                           
+                                            ▲─git commit -m─▶    ║  ║  Remote branch:                                             ║                          
+                                            │               │    ║  ║    master new (next fetch will store in remotes/ayhan)      ║                          
+      ▲───────────────────git commit -am────┼────────────▶  │    ║  ║  Local ref configured for 'git push':                       ║                          
+      │                   git commit -a -m  │            │  │    ║  ║    master pushes to master (local out of date)              ║                          
+      │                          │          │            │  │    ║  ╚═════════════════════════════════════════════════════════════╝                          
  ┌────┴────┐  ┌ ─ ─ ─ ─ ─   ┌─────────┐ ┌───┴───┐   ┌───────▼───┐║                                                                                           
  │Untracked│   Unmodified│  │ Modified│ │ Staged│ ┌─┤New Commit │║                                                                                           
  └─────────┘  └ ─ ─ ─ ─ ─   └─────────┘ └┬──────┘ │ └──────────┬┘║                                                                                           
-                                         │        Last Commit──┘ ║                                                                                           
-                                         │                    ▲  ║                                                                                           
+                                         │        Last Commit─▲┘ ║                                                                                           
                                          │                    │  ║                                                                                           
-                                         ▼──git commit --amend▶  ║                                                                                           
-                                  git commit --amend --no-edit◀┐ ╭─────────────────────────────────╮                                                         
-                                                               └─│keeps commit notes from the last │                                                         
-                                                                 ╰─────────────────────────────────╯                                                         
+                                         │                    │  ║                                                                                           
+                                         ▼──git commit --amend┘  ║                                                                                           
                                                                  ║                                                                                           
+                                  git commit --amend --no-edit ◀ ║                                                                                           
+                             ╭─────────────────────────────────│ ║                                                                                           
+                             │keeps commit notes from the last │ ║                                                                                           
+                             ╰─────────────────────────────────╯ ║                                                                                           
 ═════════════════════════════════════════════════════════════════╣                                                                                           
-                                                                 ║                                                                                           
                                                                  ║                                                                                           
                                     git reset --soft HEAD~──────▲║                                                                                           
                                     git checkout <commit> <file>│║                                                                                           

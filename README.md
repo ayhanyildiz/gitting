@@ -62,7 +62,7 @@
                                          ▼─git commit --amend─▶  ║                                                      
                                                                  ║                                                      
                                                                  ║                                                      
-                               .                                 ║                                                      
+                                                                 ║                                                      
                                                                  ║                                                      
                                                                  ║                                                      
                                                                  ║                                                      

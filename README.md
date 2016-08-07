@@ -36,9 +36,9 @@
   Untracked   │Unmodified│  │ Modified│    Staged    Committed   ║                                                      
  └ ─ ─ ─ ─ ┘  └──────────┘  └─────────┘  └ ─ ─ ─ ┘  └ ─ ─ ─ ─ ┘  ║                                                      
 ═════════════════════════════════════════════════════════════════╣                                                      
-          git rm --cached  . -r                                  ║                                                      
-    ◀─────git rm --cached  <file>──────────▲                     ║                                                      
-    │                                      │                     ║                                                      
+                                                                 ║                                                      
+    ◀─────git rm --cached  . -r────────────▲                     ║                                                      
+    │     git rm --cached  <file>          │                     ║                                                      
     │                          ◀──git reset┼───▲                 ║                                                      
     │                          │           │   │                 ║                                                      
     │                          │           │   │                 ║                                                      
@@ -53,9 +53,9 @@
       ▲────────────────────git commit -am───┼────────────▶  │    ║                                                      
       │                          │          │            │  │    ║                                                      
       │                          │          │            │  │    ║                                                      
- ┌────┴────┐  ┌ ─ ─ ─ ─ ─   ┌─────────┐  ┌──┴──○─┐  ┌───────▼───┐║                                                      
- │Untracked│   Unmodified│  │ Modified│  │ Staged│┌─┤New Commit │║                                                      
- └─────────┘  └ ─ ─ ─ ─ ─   └─────────┘  ├───────┘│ └──────────┬┘║                                                      
+ ┌────┴────┐  ┌ ─ ─ ─ ─ ─   ┌─────────┐ ┌───┴───┐   ┌───────▼───┐║                                                      
+ │Untracked│   Unmodified│  │ Modified│ │ Staged│ ┌─┤New Commit │║                                                      
+ └─────────┘  └ ─ ─ ─ ─ ─   └─────────┘ └┬──────┘ │ └──────────┬┘║                                                      
                                          │        │Last Commit │ ║                                                      
                                          │        └───────────▲┘ ║                                                      
                                          │                    │  ║                                                      
@@ -69,16 +69,16 @@
                                                                  ║                                                      
                                     git reset --soft HEAD~──────▲║                                                      
                                     git checkout <commit> <file>│║                                                      
-                                         │                      │║                                                      
-                                         │                      │║                                                      
-                                         │                      │║                                                      
- ┌ ─ ─ ─ ─ ┐  ┌ ─ ─ ─ ─ ─   ┌─────────┐  ├─────○─┐  ┌───────────┤║                                                      
-  Untracked    Unmodified│  │▲Modified│  ▼ Staged│  │Committed  ▼║                                                      
- └ ─ ─ ─ ─ ┘  └ ─ ─ ─ ─ ─   └┼────────┘  └───────┘  └───────────┤║                                                      
-                             │                                  │║                                                      
-                             │                                  │║                                                      
-                             │     git reset HEAD~              │║                                                      
-                             ▲─────git reset HEAD~ <file>    ───◀║                                                      
+                                          │                     │║                                                      
+                                          │                     │║                                                      
+                                          │                     │║                                                      
+ ┌ ─ ─ ─ ─ ┐  ┌ ─ ─ ─ ─ ─   ┌─────────┐  ┌▼──────┐  ┌───────────┤║                                                      
+  Untracked    Unmodified│  │ Modified│  │ Staged│  │Committed  │║                                                      
+ └ ─ ─ ─ ─ ┘  └ ─ ─ ─ ─ ─   └─▲───────┘  └───────┘  └───────────▼║                                                      
+                              │                                 │║                                                      
+                              │                                 │║                                                      
+                              │    git reset HEAD~              │║                                                      
+                              ▲────git reset HEAD~ <file> ──────◀║                                                      
                                                                  ║                                                      
                                                                  ║                                                      
                                                                  ║                                                      
